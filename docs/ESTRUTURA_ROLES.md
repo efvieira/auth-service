@@ -211,35 +211,6 @@ POST /api/auth/login
 ✅ Consulta autorizada (ou erro 403)
 ```
 
-## 📁 Estrutura de Arquivos Criados
-
-```
-src/main/java/com/authservice/
-├── enums/
-│   └── TipoPerfil.java           ← Tipos de role
-├── model/
-│   ├── Perfil.java               ← Entidade perfil
-│   └── Usuario.java              ← Atualizado com perfil
-├── repository/
-│   └── PerfilRepository.java      ← Acesso a perfis
-├── service/
-│   ├── PermissaoService.java      ← Validação de permissões
-│   ├── PerfilInitializer.java     ← Cria roles no startup
-│   └── UsuarioService.java        ← Atualizado
-├── exception/
-│   └── PermissaoNegadaException.java
-└── controller/
-    └── UsuarioController.java     ← Atualizado com validações
-
-src/main/resources/
-├── data.sql                       ← Dados de exemplo
-└── application.yaml               ← Existente
-
-docs/
-├── ROLES.md                       ← Este arquivo
-└── README.md                      ← Atualizado
-```
-
 ## 🎯 Matriz de Permissões
 
 | Ação | USER | ADMIN |
