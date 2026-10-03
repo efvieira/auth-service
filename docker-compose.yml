@@ -1,0 +1,24 @@
+# DynamoDB local via LocalStack.
+# As tabelas, os perfis e o ADMIN inicial são criados pela aplicação na inicialização.
+#
+#   docker compose up -d
+#   ./mvnw spring-boot:run      (Windows: .\mvnw.cmd spring-boot:run)
+services:
+  localstack:
+    image: localstack/localstack:3.8
+    container_name: auth-service-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=dynamodb
+      - PERSISTENCE=1
+    volumes:
+      - localstack-data:/var/lib/localstack
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:4566/_localstack/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  localstack-data:

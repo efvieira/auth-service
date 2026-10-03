@@ -1,0 +1,8 @@
+{
+  "nome": "Admin User",
+  "email": "admin@example.com",
+  "senha": "AdminSenha123",
+  "ativo": true,
+  "perfil": "ADMIN"
+}
+
