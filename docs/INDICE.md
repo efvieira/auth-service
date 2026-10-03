@@ -40,27 +40,20 @@ Este é o índice completo da documentação do **Auth Service**, um serviço ro
    - Testando permissões
    - Casos de sucesso e erro
 
-### Resumo de Mudanças
-6. **[MUDANCAS_ROLES.md](MUDANCAS_ROLES.md)** 📋
-   - O que foi implementado
-   - Novos arquivos criados
-   - Fluxos antes e depois
-   - Métricas de implementação
-
 ### API Documentation (Swagger/OpenAPI)
-7. **[SWAGGER.md](SWAGGER.md)** 📚
+6. **[SWAGGER.md](SWAGGER.md)** 📚
    - Documentação interativa com Swagger UI
    - Como acessar e testar endpoints
    - Download da documentação
    - Integrações com ferramentas
 
-8. **[POSTMAN.md](POSTMAN.md)** 📮
+7. **[POSTMAN.md](POSTMAN.md)** 📮
    - Como importar no Postman
    - Scripts de teste
    - Variáveis de ambiente
    - Workflow automático
 
-9. **[SWAGGER_IMPLEMENTATION.md](SWAGGER_IMPLEMENTATION.md)** 🔧
+8. **[SWAGGER_IMPLEMENTATION.md](SWAGGER_IMPLEMENTATION.md)** 🔧
    - Resumo da implementação
    - Anotações utilizadas
    - URLs de acesso
@@ -68,73 +61,7 @@ Este é o índice completo da documentação do **Auth Service**, um serviço ro
 
 ## 🗂️ Estrutura de Pastas
 
-```
-untitled/
-├── src/
-│   ├── main/
-│   │   ├── java/com/authservice/
-│   │   │   ├── controller/
-│   │   │   │   ├── AutenticacaoController.java    ✉️  Endpoints de auth
-│   │   │   │   └── UsuarioController.java         ✉️  Endpoints de usuários
-│   │   │   ├── service/
-│   │   │   │   ├── AutenticacaoService.java       🔑 Lógica de autenticação
-│   │   │   │   ├── UsuarioService.java            👤 Gerenciamento de usuários
-│   │   │   │   ├── PermissaoService.java          🔐 Validação de permissões
-│   │   │   │   └── PerfilInitializer.java         ⚙️  Inicializa roles
-│   │   │   ├── model/
-│   │   │   │   ├── Usuario.java                   👥 Usuário com perfil
-│   │   │   │   ├── Perfil.java                    🎭 Novo: Perfil/Role
-│   │   │   │   ├── RefreshToken.java
-│   │   │   │   └── AuditoriaAutenticacao.java
-│   │   │   ├── repository/
-│   │   │   │   ├── UsuarioRepository.java
-│   │   │   │   ├── PerfilRepository.java          🆕 Novo: Acesso a Perfis
-│   │   │   │   ├── RefreshTokenRepository.java
-│   │   │   │   └── AuditoriaAutenticacaoRepository.java
-│   │   │   ├── dto/
-│   │   │   │   ├── PerfilDTO.java                 🆕 Novo
-│   │   │   │   ├── CriarUsuarioDTO.java           ✏️  Atualizado
-│   │   │   │   ├── UsuarioResponseDTO.java        ✏️  Atualizado
-│   │   │   │   ├── LoginDTO.java
-│   │   │   │   ├── RegistroDTO.java
-│   │   │   │   ├── TokenResponseDTO.java
-│   │   │   │   ├── RefreshTokenDTO.java
-│   │   │   │   └── ErrorResponseDTO.java
-│   │   │   ├── exception/
-│   │   │   │   ├── PermissaoNegadaException.java  🆕 Novo
-│   │   │   │   ├── EmailJaExisteException.java
-│   │   │   │   ├── SenhaInvalidaException.java
-│   │   │   │   ├── UsuarioNaoEncontradoException.java
-│   │   │   │   ├── UsuarioInativoException.java
-│   │   │   │   └── TokenExpiradoException.java
-│   │   │   ├── enums/
-│   │   │   │   └── TipoPerfil.java                🆕 Novo: ADMIN, USER
-│   │   │   ├── security/
-│   │   │   │   └── JwtTokenProvider.java
-│   │   │   ├── config/
-│   │   │   │   └── SecurityConfig.java
-│   │   │   ├── handler/
-│   │   │   │   └── GlobalExceptionHandler.java    ✏️  Atualizado
-│   │   │   ├── validator/
-│   │   │   │   └── SenhaValidator.java
-│   │   │   └── AuthServiceApplication.java
-│   │   └── resources/
-│   │       ├── application.yaml
-│   │       └── data.sql                           🆕 Novo: Dados de teste
-│   └── test/
-│       └── java/com/authservice/
-│           └── AuthServiceApplicationTests.java
-├── pom.xml                                        📦 Dependências Maven
-├── README.md                                      📖 Leia primeiro!
-├── INSTALACAO.md                                  🚀 Como instalar
-├── ROLES.md                                       🔐 Sistema de roles
-├── ESTRUTURA_ROLES.md                             📊 Diagramas e fluxos
-├── GUIA_PRATICO.md                                👨‍💼 Exemplo completo
-├── MUDANCAS_ROLES.md                              📋 O que mudou
-├── INDICE.md                                      📚 Este arquivo
-├── .gitignore
-└── ...
-```
+Veja a seção [Arquitetura](../README.md#️-arquitetura) do README.
 
 ## 🎓 Começando por Aqui
 
@@ -148,7 +75,6 @@ untitled/
 1. Comece com [ROLES.md](ROLES.md) - Visão geral
 2. Veja [ESTRUTURA_ROLES.md](ESTRUTURA_ROLES.md) - Diagramas detalhados
 3. Teste [GUIA_PRATICO.md](GUIA_PRATICO.md) - Cenários reais
-4. Revise [MUDANCAS_ROLES.md](MUDANCAS_ROLES.md) - Implementação
 
 ### Se você precisa de ajuda técnica:
 1. Consulte os exemplos em [INSTALACAO.md](INSTALACAO.md)
